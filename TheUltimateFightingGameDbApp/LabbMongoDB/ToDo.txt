@@ -1,0 +1,32 @@
+﻿En databas som lagrar information om olika fighters i ett fighting-spel
+
+[x] Basic setup, Controller, IO, DAO
+[x] Connect till databas - Program.cs
+
+[X] En Admin och en User.
+	[X] En ny meny före Main Menu.
+	[X] Två olika main Menus.
+
+[X] CRUD - MongoDao
+	[X] Create
+		[] En Regex för alla string variabler som kan deklareras?
+	[X] ReadOne -> Id
+	[X] ReadAll -> Foreach(var x in fighters) {WriteLine(x.id + x.Name)}
+				  if(input == fighter.id) -> ShowFighterInfo()
+		[X] Sortera alla fighters
+	[X] Update
+	[x] Delete
+		[X] Få ut en felutskrift och en lyckad utskrift.
+			Lös:
+			if (collection.Find(filter).Any()) --> Kollar ifall det finns ett document med detta filter
+            {
+                collection.DeleteOne(filter);	-->	Ta bort
+                return true;					-->Returnera sant, då borttagningen gjorts, hantera ett resultat av detta i en if-sats
+            }
+			return false;	--> Om det inte fanns returneras false, hantera en felutskrift från en if-sats
+
+[x] KeyEvents - InventoryController
+	[x] Go Back
+	[x] Exit
+[x] Olika Menyer . Menus
+	[x] FighterMenu
